@@ -8,18 +8,17 @@ const bigWaleWale = require("../assets/bigwale/big-wale55.png");
 const bigWaleBoat = require("../assets/bigwale/big-wale44.png");
 const bigWaleMoon = require("../assets/bigwale/big-wale33.png");
 
-const BigWale = () => {
-	const handleWaleParallax = (e) => {
-		document.querySelectorAll(".item").forEach((item) => {
-			let movement = item.getAttribute("data-value");
-			let x = (e.clientX * movement) / 250;
-			let y = (e.clientY * movement) / 250;
+const BigWale = ({ waleX, waleY }) => {
+	document.querySelectorAll(".item").forEach((item) => {
+		let movement = item.getAttribute("data-value");
+		let x = (waleX * movement) / 250;
+		let y = (waleY * movement) / 250;
 
-			item.style.transform = `translate(${x}px, ${y}px)`;
-		});
-	};
+		item.style.transform = `translate(${x}px, ${y}px)`;
+	});
+
 	return (
-		<div className="big-wale-container" onMouseMove={(e) => handleWaleParallax(e)}>
+		<div className="big-wale-container">
 			<div className="corrector">
 				<img src={bigWaleCThree} alt="big-wale" id="bigWaleCloudThree" className="item" data-value="0" />
 				<img src={bigWaleCTwo} alt="big-wale" id="bigWaleCloudTwo" className="item" data-value="-2" />

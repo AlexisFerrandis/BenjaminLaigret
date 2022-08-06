@@ -5,12 +5,14 @@ import TopNavBar from "../navbar/TopNavBar";
 
 import Home from "../../pages/Home";
 import NotFound from "../../pages/NotFound";
+import SideNavBar from "../navbar/SideNavBar";
 
 const index = () => {
 	return (
 		<div>
 			<Router>
 				<TopNavBar />
+				<SideNavBar />
 				<Routes>
 					<Route path="/" exact element={<Home />} />
 
