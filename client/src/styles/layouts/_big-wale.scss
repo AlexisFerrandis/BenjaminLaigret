@@ -1,0 +1,24 @@
+.big-wale-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(0deg, rgba(21, 21, 75, 1) 0%, rgba(37, 46, 111, 1) 100%);
+	z-index: -1;
+	.corrector {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		filter: brightness(0.7);
+		transform: scale(1.03);
+		img {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: $flash-animation ease-out;
+		}
+	}
+}
