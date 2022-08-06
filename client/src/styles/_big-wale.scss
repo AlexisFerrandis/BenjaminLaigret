@@ -1,0 +1,34 @@
+.big-wale-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: linear-gradient(0deg, rgba(21, 21, 75, 1) 0%, rgba(37, 46, 111, 1) 100%);
+	z-index: -1;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	#bigWaleCloudThree {
+		filter: brightness(0.8);
+	}
+	#bigWaleCloudTwo {
+		filter: brightness(0.8);
+	}
+	#bigWaleCloudOne {
+		filter: brightness(0.8);
+	}
+	#bigWaleWale {
+		filter: brightness(0.8);
+	}
+	#bigWaleBoat {
+		filter: brightness(0.8);
+	}
+	#bigWaleMoon {
+		filter: brightness(0.8);
+	}
+}
