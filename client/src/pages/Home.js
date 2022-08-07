@@ -6,6 +6,7 @@ const Home = () => {
 	const [waleY, setWaleY] = useState(0);
 
 	const handleWaleParallax = (e) => {
+		console.log(e);
 		setWaleX(e.clientX);
 		setWaleY(e.clientY);
 	};

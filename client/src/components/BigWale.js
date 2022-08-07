@@ -22,9 +22,10 @@ const BigWale = ({ waleX, waleY }) => {
 			<div className="corrector">
 				<img src={bigWaleCThree} alt="big-wale" id="bigWaleCloudThree" className="item" data-value="0" />
 				<img src={bigWaleCTwo} alt="big-wale" id="bigWaleCloudTwo" className="item" data-value="-2" />
+				<div id="bigWaleCMove"></div>
 				<img src={bigWaleCOne} alt="big-wale" id="bigWaleCloudOne" className="item" data-value="-3" />
 				<img src={bigWaleWale} alt="big-wale" id="bigWaleWale" className="item" data-value="4" />
-				<img src={bigWaleBoat} alt="big-wale" id="bigWaleBoat" className="item" data-value="6" />
+				<img src={bigWaleBoat} alt="big-wale" id="bigWaleBoat" className="item" data-value="10" />
 				<img src={bigWaleMoon} alt="big-wale" id="bigWaleMoon" className="item" data-value="-1" />
 			</div>
 		</div>
