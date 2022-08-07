@@ -18,26 +18,26 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: $long-animation ease-out;
+			transition: $short-animation ease-out;
 		}
-		#bigWaleCMove {
-			position: absolute;
-			bottom: 70px;
-			right: -250px;
-			width: 100%;
-			height: 100%;
-			animation: cloud-movement 90s linear infinite;
-			transform: scale(0.6);
-			background: url(../assets/big-waleCMove.png);
-		}
+		// #bigWaleCMove {
+		// 	position: absolute;
+		// 	bottom: 70px;
+		// 	right: -250px;
+		// 	width: 100%;
+		// 	height: 100%;
+		// 	animation: cloud-movement 90s linear infinite;
+		// 	transform: scale(0.6);
+		// 	background: url(../assets/big-waleCMove.png);
+		// }
 	}
 }
 
-@keyframes cloud-movement {
-	0% {
-		background-position-x: 0;
-	}
-	100% {
-		background-position-x: 2500px;
-	}
-}
+// @keyframes cloud-movement {
+// 	0% {
+// 		background-position-x: 0;
+// 	}
+// 	100% {
+// 		background-position-x: 2500px;
+// 	}
+// }

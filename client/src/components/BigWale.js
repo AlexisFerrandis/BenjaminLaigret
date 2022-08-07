@@ -9,8 +9,8 @@ const bigWaleBoat = require("../assets/bigwale/big-wale44.png");
 const bigWaleMoon = require("../assets/bigwale/big-wale33.png");
 
 const BigWale = () => {
-	const [waleX, setWaleX] = useState(0);
-	const [waleY, setWaleY] = useState(0);
+	const [waleX, setWaleX] = useState();
+	const [waleY, setWaleY] = useState();
 
 	document.addEventListener("mousemove", (e) => {
 		setWaleX(e.clientX);
@@ -30,7 +30,8 @@ const BigWale = () => {
 			<div className="corrector">
 				<img src={bigWaleCThree} alt="big-wale" id="bigWaleCloudThree" className="item" data-value="0" />
 				<img src={bigWaleCTwo} alt="big-wale" id="bigWaleCloudTwo" className="item" data-value="-2" />
-				<div id="bigWaleCMove"></div>
+				{/* <div id="bigWaleCMove"></div> */}
+				{/* moving cloud ? */}
 				<img src={bigWaleCOne} alt="big-wale" id="bigWaleCloudOne" className="item" data-value="-3" />
 				<img src={bigWaleWale} alt="big-wale" id="bigWaleWale" className="item" data-value="4" />
 				<img src={bigWaleBoat} alt="big-wale" id="bigWaleBoat" className="item" data-value="10" />

@@ -9,11 +9,11 @@
 	margin-top: 35px;
 	padding: 0 35px;
 	user-select: none;
+	z-index: 1000;
 	&__name {
 		color: #fff;
 		font-size: 1.6rem;
 		letter-spacing: 2px;
-		z-index: 999;
 		transition: $short-animation;
 		&:hover {
 			filter: brightness(0.8);

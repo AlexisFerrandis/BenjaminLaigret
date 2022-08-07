@@ -1,13 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
 
-const MenuBtn = () => {
-	const [menuDisplay, setMenuDisplay] = useState(false);
-
-	const handleMenuDisplay = () => {
-		setMenuDisplay(!menuDisplay);
-	};
-
+const MenuBtn = ({ menuDisplay }) => {
 	return (
 		<div>
 			<div className="menu-container">
@@ -28,7 +22,6 @@ const MenuBtn = () => {
 					</ul>
 				</div>
 			</div>
-			<div className="menu-btn" onClick={handleMenuDisplay}></div>
 		</div>
 	);
 };
