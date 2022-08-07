@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // img
 const bigWaleCThree = require("../assets/bigwale/big-wale88.png");
@@ -8,7 +8,15 @@ const bigWaleWale = require("../assets/bigwale/big-wale55.png");
 const bigWaleBoat = require("../assets/bigwale/big-wale44.png");
 const bigWaleMoon = require("../assets/bigwale/big-wale33.png");
 
-const BigWale = ({ waleX, waleY }) => {
+const BigWale = () => {
+	const [waleX, setWaleX] = useState(0);
+	const [waleY, setWaleY] = useState(0);
+
+	document.addEventListener("mousemove", (e) => {
+		setWaleX(e.clientX);
+		setWaleY(e.clientY);
+	});
+
 	document.querySelectorAll(".item").forEach((item) => {
 		let movement = item.getAttribute("data-value");
 		let x = (waleX * movement) / 250;

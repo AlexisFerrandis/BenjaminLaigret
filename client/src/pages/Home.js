@@ -1,25 +1,25 @@
-import React, { useState } from "react";
+import React from "react";
 import BigWale from "../components/BigWale";
+import TitleUnderline from "../components/components/TitleUnderline";
 
 const Home = () => {
-	const [waleX, setWaleX] = useState(0);
-	const [waleY, setWaleY] = useState(0);
-
-	const handleWaleParallax = (e) => {
-		console.log(e);
-		setWaleX(e.clientX);
-		setWaleY(e.clientY);
-	};
-
 	return (
-		<div className="home-page" onMouseMove={(e) => handleWaleParallax(e)}>
-			<BigWale waleX={waleX} waleY={waleY} />
+		<div className="home-page">
+			<BigWale />
 			<div className="hero-container">
 				<h1>
 					BENJAMIN
 					<br />
 					LAIGRET
 				</h1>
+				<TitleUnderline />
+				<p>
+					graphisme
+					<br />
+					illustration
+					<br />
+					motion design
+				</p>
 			</div>
 		</div>
 	);

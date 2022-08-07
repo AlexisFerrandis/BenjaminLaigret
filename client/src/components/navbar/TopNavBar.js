@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 
 // img
 import instagram from "../../assets/navbar/instagram-brands.svg";
+import Menu from "./Menu";
 
 const TopNavBar = () => {
 	return (
@@ -14,7 +15,7 @@ const TopNavBar = () => {
 				<a href="https://www.instagram.com/benjamin_laigret/" target="blank">
 					<img src={instagram} alt="instagram" />
 				</a>
-				<div className="menu-icon">||</div>
+				<Menu />
 			</div>
 		</div>
 	);

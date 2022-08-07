@@ -15,7 +15,6 @@ const index = () => {
 				<SideNavBar />
 				<Routes>
 					<Route path="/" exact element={<Home />} />
-
 					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Router>
