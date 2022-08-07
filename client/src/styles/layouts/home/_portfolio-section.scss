@@ -1,0 +1,27 @@
+.portfolio-section {
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		width: 90%;
+		height: 80%;
+		margin-top: 20px;
+		&--item {
+			width: 30%;
+			height: 90%;
+			overflow: hidden;
+			filter: brightness(0.8);
+			cursor: pointer;
+		}
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+		video {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			transform: scale(1.4);
+		}
+	}
+}

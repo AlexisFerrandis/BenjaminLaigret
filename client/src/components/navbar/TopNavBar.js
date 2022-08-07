@@ -7,9 +7,18 @@ import Menu from "./Menu";
 
 const TopNavBar = () => {
 	const [menuDisplay, setMenuDisplay] = useState(false);
+	const [menuActive, setMenuActive] = useState(false);
 
 	const handleMenuDisplay = () => {
-		setMenuDisplay(!menuDisplay);
+		if (menuDisplay) {
+			setMenuDisplay(false);
+			setTimeout(() => {
+				setMenuActive(false);
+			}, 500);
+		} else {
+			setMenuActive(true);
+			setMenuDisplay(true);
+		}
 	};
 	return (
 		<>
@@ -24,7 +33,7 @@ const TopNavBar = () => {
 					<div className={menuDisplay ? "opened-menu-btn" : "menu-btn"} onClick={handleMenuDisplay}></div>
 				</div>
 			</div>
-			<Menu menuDisplay={menuDisplay} />
+			{menuActive && <Menu menuDisplay={menuDisplay} setMenuDisplay={setMenuDisplay} setMenuActive={setMenuActive} />}
 		</>
 	);
 };

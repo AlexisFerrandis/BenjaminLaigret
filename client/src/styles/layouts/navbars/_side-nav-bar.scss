@@ -5,13 +5,29 @@
 	align-items: center;
 	justify-content: center;
 	top: 50%;
-	left: 0;
+	right: 0;
 	transform: translateY(-50%);
 	padding: 35px 35px 0 35px;
-	z-index: -1;
 	a {
-		color: #fff;
-		font-size: 1.6rem;
-		letter-spacing: 2px;
+		width: 32px;
+		height: 4px;
+		border-radius: 10px;
+		background-color: #fff;
+		margin: 24px 0;
+		cursor: pointer;
+		transition: $short-animation ease-in-out;
+	}
+	.is-active {
+		background-color: $bl-tertiary;
+		transform: scaleX(1.75);
+		transform-origin: right;
+	}
+	.bob {
+		width: 32px;
+		height: 4px;
+		border-radius: 10px;
+		background-color: #fff;
+		margin: 24px 0;
+		cursor: pointer;
 	}
 }

@@ -1,25 +1,35 @@
 .home-page {
-	display: flex;
-	width: 100%;
 	height: 100vh;
-	user-select: none;
-	.hero-container {
-		width: 80%;
-		height: 50%;
-		margin: auto;
+	overflow-y: hidden;
+	.home-page__section {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		height: 100vh;
+		user-select: none;
+		padding: 100px 0 0 80px;
 		h1 {
 			color: white;
-			font-size: 6.6em;
-			font-weight: 500;
-			line-height: 1.2em;
-			letter-spacing: 10px;
+			font-size: 4.4em;
 		}
-		p {
-			color: #fff;
-			font-size: 1.6rem;
-			letter-spacing: 2px;
-			line-height: 1.5em;
-			margin: 40px 0 0 10px;
+		&--hero-container {
+			width: 90%;
+			height: 50%;
+			margin: auto;
+			h1 {
+				color: white;
+				font-size: 6.6em;
+				font-weight: 500;
+				line-height: 1.2em;
+				letter-spacing: 10px;
+			}
+			p {
+				color: #fff;
+				font-size: 1.6rem;
+				letter-spacing: 2px;
+				line-height: 1.5em;
+				margin: 40px 0 0 10px;
+			}
 		}
 	}
 }
