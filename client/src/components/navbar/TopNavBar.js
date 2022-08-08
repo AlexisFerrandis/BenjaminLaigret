@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 // img
-import instagram from "../../assets/navbar/instagram-brands.svg";
+// import instagram from "../../assets/navbar/instagram-brands.svg";
 import Menu from "./Menu";
 
 const TopNavBar = () => {
@@ -27,9 +27,9 @@ const TopNavBar = () => {
 					Benjamin Laigret
 				</NavLink>
 				<div className="top-nav-bar__links">
-					<a href="https://www.instagram.com/benjamin_laigret/" target="blank">
+					{/* <a href="https://www.instagram.com/benjamin_laigret/" target="blank">
 						<img src={instagram} alt="instagram" />
-					</a>
+					</a> */}
 					<div className={menuDisplay ? "opened-menu-btn" : "menu-btn"} onClick={handleMenuDisplay}></div>
 				</div>
 			</div>

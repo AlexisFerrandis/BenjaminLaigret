@@ -1,11 +1,11 @@
 import React from "react";
+import TitleUnderline from "../components/TitleUnderline";
 
 const AboutSection = () => {
 	return (
 		<div className="home-page__section" id="aboutSection">
-			<h1>DU CONTENU</h1>
-			<h1>DU CONTENU</h1>
-			<h1>DU CONTENU</h1>
+			<h2>À propos</h2>
+			<TitleUnderline />
 		</div>
 	);
 };
