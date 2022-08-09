@@ -5,10 +5,9 @@
 	&__content {
 		position: relative;
 		justify-content: space-between;
-		width: 80%;
+		width: 85%;
 		height: 70%;
-		margin: 40px 0 0 80px;
-		padding: 10px 0 0px 10px;
+		margin: 40px 0 0 2%;
 		background-color: transparent;
 
 		// grid
@@ -235,12 +234,16 @@
 	}
 	.slide-right {
 		right: 15%;
+		opacity: 0;
+		animation: grid-btn 1000ms ease-in-out forwards 300ms;
 		&:hover {
 			transform: translateX(10px) scaleX(2);
 		}
 	}
 	.slide-left {
 		left: 15%;
+		opacity: 0;
+		animation: grid-btn 1000ms ease-in-out forwards 500ms;
 		&:hover {
 			transform: translateX(-10px) scaleX(2);
 		}
@@ -255,5 +258,14 @@
 	100% {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+@keyframes grid-btn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
 	}
 }

@@ -23,12 +23,16 @@ const PortfolioSection = ({ portfolioDisplayed }) => {
 				<div className="portfolio-section__content--grid" id="portfolioGrid">
 					<div className="portfolio-grid">{portfolioDisplayed && <Grid setFullScreen={setFullScreen} setPicSrc={setPicSrc} />}</div>
 				</div>
-				<button className="slide-button slide-right" type="button" onClick={handleSlideRight}>
-					&#8641;
-				</button>
-				<button className="slide-button slide-left" type="button" onClick={handleSlideLeft}>
-					&#8637;
-				</button>
+				{portfolioDisplayed && (
+					<button className="slide-button slide-right" type="button" onClick={handleSlideRight}>
+						&#8641;
+					</button>
+				)}
+				{portfolioDisplayed && (
+					<button className="slide-button slide-left" type="button" onClick={handleSlideLeft}>
+						&#8637;
+					</button>
+				)}
 			</div>
 		</div>
 	);
