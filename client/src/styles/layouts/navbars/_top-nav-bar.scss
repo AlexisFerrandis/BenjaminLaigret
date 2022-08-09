@@ -10,6 +10,8 @@
 	padding: 0 35px;
 	user-select: none;
 	z-index: 1000;
+	animation: topnav-fade-in 2000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 2800ms;
+	opacity: 0;
 	&__name {
 		color: #fff;
 		font-size: 1.6rem;
@@ -31,5 +33,16 @@
 				filter: invert(0.8);
 			}
 		}
+	}
+}
+
+@keyframes topnav-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }

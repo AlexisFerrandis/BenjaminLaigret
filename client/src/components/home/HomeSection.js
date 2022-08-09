@@ -11,13 +11,19 @@ const HomeSection = () => {
 					LAIGRET
 				</h1>
 				<TitleUnderline />
-				<p>
-					graphisme
-					<br />
-					illustration
-					<br />
-					motion design
-				</p>
+				<div className="skills">
+					<p className="skill" id="skillsOne">
+						graphisme
+					</p>
+
+					<p className="skill" id="skillsTwo">
+						illustration
+					</p>
+
+					<p className="skill" id="skillsThree">
+						motion design
+					</p>
+				</div>
 			</div>
 		</div>
 	);
