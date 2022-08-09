@@ -8,7 +8,7 @@ const FullScreenPicture = ({ picSrc, setFullScreen }) => {
 	const handleCloseFullScreen = () => {
 		setTimeout(() => {
 			setFullScreen(false);
-		}, 450);
+		}, 400);
 
 		const fullScreenPicture = document.getElementById("fullScreenPicture");
 		fullScreenPicture.style.animation = "close-full-screen 500ms cubic-bezier(0.66, 0, 0.3, 0.98)";

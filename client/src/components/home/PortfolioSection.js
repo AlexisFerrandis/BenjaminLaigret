@@ -4,7 +4,7 @@ import FullScreenPicture from "./Portfolio/FullScreenPicture";
 
 import Grid from "./Portfolio/Grid";
 
-const PortfolioSection = () => {
+const PortfolioSection = ({ portfolioDisplayed }) => {
 	const [fullScreen, setFullScreen] = useState(false);
 	const [picSrc, setPicSrc] = useState("");
 
@@ -17,13 +17,11 @@ const PortfolioSection = () => {
 	return (
 		<div className="home-page__section portfolio-section" id="portfolioSection">
 			{fullScreen && <FullScreenPicture picSrc={picSrc} setFullScreen={setFullScreen} />}
-			<h2>Portfolio</h2>
-			<TitleUnderline />
+			{portfolioDisplayed && <h2>Portfolio</h2>}
+			{portfolioDisplayed && <TitleUnderline />}
 			<div className="portfolio-section__content">
 				<div className="portfolio-section__content--grid" id="portfolioGrid">
-					<div className="portfolio-grid">
-						<Grid setFullScreen={setFullScreen} setPicSrc={setPicSrc} />
-					</div>
+					<div className="portfolio-grid">{portfolioDisplayed && <Grid setFullScreen={setFullScreen} setPicSrc={setPicSrc} />}</div>
 				</div>
 				<button className="slide-button slide-right" type="button" onClick={handleSlideRight}>
 					&#8641;

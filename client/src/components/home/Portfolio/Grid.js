@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // img
 import grid0 from "../../../assets/portfolio/grid0-min.jpg";
@@ -24,11 +24,22 @@ import grid19 from "../../../assets/portfolio/grid19-min.jpg";
 import grid20 from "../../../assets/portfolio/grid20-min.jpg";
 import grid21 from "../../../assets/portfolio/grid21-min.jpg";
 
+import grid96 from "../../../assets/portfolio/grid96-min.jpg";
+import grid97 from "../../../assets/portfolio/grid97-min.jpg";
+import grid98 from "../../../assets/portfolio/grid98-min.jpg";
+
 const Grid = ({ setFullScreen, setPicSrc }) => {
 	const handleFullScreenPic = (e) => {
 		setFullScreen(true);
 		setPicSrc(e.target.src);
 	};
+
+	useEffect(() => {
+		const gridItems = document.querySelectorAll(".grid-item");
+		for (let i = 0; i < gridItems.length; i++) {
+			gridItems[i].style.animationDelay = `${750 + 280 * i * Math.floor(Math.random() * 4)}ms`;
+		}
+	});
 
 	return (
 		<>
@@ -91,6 +102,18 @@ const Grid = ({ setFullScreen, setPicSrc }) => {
 			<div id="item-17" className="grid-item" onClick={(e) => handleFullScreenPic(e)}>
 				<img src={grid18} alt="illustration" className="portoflio-illustration" />
 			</div>
+
+			<div id="item-97" className="grid-item" onClick={(e) => handleFullScreenPic(e)}>
+				<img src={grid97} alt="illustration" className="portoflio-illustration" />
+			</div>
+			<div id="item-98" className="grid-item" onClick={(e) => handleFullScreenPic(e)}>
+				<img src={grid98} alt="illustration" className="portoflio-illustration" />
+			</div>
+
+			<div id="item-99" className="grid-item" onClick={(e) => handleFullScreenPic(e)}>
+				<img src={grid96} alt="illustration" className="portoflio-illustration" />
+			</div>
+
 			<div id="item-18" className="grid-item" onClick={(e) => handleFullScreenPic(e)}>
 				<img src={grid19} alt="illustration" className="portoflio-illustration" />
 			</div>
