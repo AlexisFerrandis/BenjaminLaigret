@@ -37,7 +37,7 @@ const Grid = ({ setFullScreen, setPicSrc }) => {
 	useEffect(() => {
 		const gridItems = document.querySelectorAll(".grid-item");
 		for (let i = 0; i < gridItems.length; i++) {
-			gridItems[i].style.animationDelay = `${750 + 280 * i * Math.floor(Math.random() * 4)}ms`;
+			gridItems[i].style.animationDelay = `${750 + 200 * i * Math.floor(Math.random() * 3)}ms`;
 		}
 	});
 

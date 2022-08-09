@@ -1,15 +1,36 @@
 .about-section {
 	&__content {
-		width: 100%;
-		height: 80%;
+		width: 90%;
+		height: 75%;
 		display: flex;
 		justify-content: space-between;
+		margin: 40px 0 0 2%;
+
 		&--skills-part {
 			width: 30%;
 			height: 100%;
-			background-color: yellow;
+			.skills {
+				display: flex;
+				justify-content: space-between;
+				flex-wrap: wrap;
+				.skill {
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 20%;
+					margin: 20px 10px;
+					img {
+						width: 64px;
+						height: 64px;
+						object-fit: cover;
+						filter: drop-shadow(0 0.7rem 0.5rem $bl-dark);
+					}
+				}
+			}
 		}
 		&--character-part {
+			width: 70%;
+			height: 100%;
 		}
 	}
 }

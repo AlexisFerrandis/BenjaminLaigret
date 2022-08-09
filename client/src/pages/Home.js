@@ -13,11 +13,13 @@ const Home = ({ context }) => {
 	const navigate = useNavigate();
 	const wheelTimeout = useRef();
 
+	const [homeDisplayed, setHomeDisplayed] = useState(false);
 	const [portfolioDisplayed, setPortfolioDisplayed] = useState(false);
 
 	// scroll handler
 	useEffect(() => {
 		// first time display
+		if (context === "homeSection") setHomeDisplayed(true);
 		if (context === "portfolioSection") setPortfolioDisplayed(true);
 
 		// scroll to
@@ -88,7 +90,7 @@ const Home = ({ context }) => {
 	return (
 		<div className="home-page" onWheel={(e) => handleScroll(e)}>
 			<BigWale />
-			<HomeSection />
+			<HomeSection homeDisplayed={homeDisplayed} />
 			<PortfolioSection portfolioDisplayed={portfolioDisplayed} />
 			<AboutSection />
 			<ContactSection />
