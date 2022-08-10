@@ -16,6 +16,7 @@ const Home = ({ context }) => {
 	const [homeDisplayed, setHomeDisplayed] = useState(false);
 	const [portfolioDisplayed, setPortfolioDisplayed] = useState(false);
 	const [aboutDisplayed, setAboutDisplayed] = useState(false);
+	const [contactDisplayed, setContactDisplayed] = useState(false);
 
 	// scroll handler
 	useEffect(() => {
@@ -23,6 +24,7 @@ const Home = ({ context }) => {
 		if (context === "homeSection") setHomeDisplayed(true);
 		if (context === "portfolioSection") setPortfolioDisplayed(true);
 		if (context === "aboutSection") setAboutDisplayed(true);
+		if (context === "contactSection") setContactDisplayed(true);
 
 		// scroll to
 		let section = document.getElementById(context);
@@ -95,7 +97,7 @@ const Home = ({ context }) => {
 			<HomeSection homeDisplayed={homeDisplayed} />
 			<PortfolioSection portfolioDisplayed={portfolioDisplayed} />
 			<AboutSection aboutDisplayed={aboutDisplayed} />
-			<ContactSection />
+			<ContactSection contactDisplayed={contactDisplayed} />
 		</div>
 	);
 };

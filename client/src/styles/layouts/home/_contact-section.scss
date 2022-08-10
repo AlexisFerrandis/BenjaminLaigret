@@ -14,6 +14,8 @@
 				display: flex;
 				align-items: center;
 				margin-bottom: 30px;
+				opacity: 0;
+				animation: coordinates-fade-in 2000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 				img {
 					width: 36px;
 					height: 36px;
@@ -31,6 +33,10 @@
 			.social-links {
 				position: absolute;
 				bottom: 40px;
+				.social-link {
+					opacity: 0;
+					animation: social-links-fade-in 2000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+				}
 				img {
 					width: 36px;
 					height: 36px;
@@ -44,26 +50,31 @@
 			width: 70%;
 			height: 100%;
 			form {
+				position: relative;
 				width: 60%;
 				margin: 0 auto;
-				/* width */
+
 				::-webkit-scrollbar {
 					width: 4px;
 				}
-
-				/* Track */
 				::-webkit-scrollbar-track {
 					background: transparent;
 				}
-
-				/* Handle */
 				::-webkit-scrollbar-thumb {
 					background: $bl-tertiary;
 				}
-
-				/* Handle on hover */
 				::-webkit-scrollbar-thumb:hover {
 					background: $bl-quatrary;
+				}
+				label {
+					position: relative;
+					.error {
+						position: absolute;
+						bottom: 30px;
+						left: 50%;
+						transform: translateX(-50%);
+						color: #fff;
+					}
 				}
 				input[type="text"],
 				input[type="email"],
@@ -87,6 +98,11 @@
 					&::selection {
 						background-color: rgba($bl-secondary, 0.8);
 					}
+					// &:invalid {
+					// 	animation: input-error 0.2s ease-in-out 2;
+					// }
+					opacity: 0;
+					animation: inputs-fade-in 2200ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 				}
 				textarea {
 					height: 200px;
@@ -97,12 +113,94 @@
 					margin: auto;
 					cursor: pointer;
 					transition: 100ms;
+					&:focus {
+						border: 3px solid#fff;
+					}
 					&:active {
 						border: 3px solid #fff;
 						transform: scale(0.98);
+					}
+				}
+				.message-sent {
+					position: absolute;
+					bottom: 5px;
+					left: 55%;
+					opacity: 0;
+					animation: paper-plane 3000ms ease-in-out forwards;
+					img {
+						width: 36px;
+						height: 36px;
+						filter: invert(1) grayscale(1);
 					}
 				}
 			}
 		}
 	}
 }
+
+@keyframes coordinates-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateX(-200px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+@keyframes social-links-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(200px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes inputs-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-200px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes paper-plane {
+	0% {
+		opacity: 0;
+		transform: translateX(0);
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(220px) rotate(220deg);
+	}
+}
+
+// @keyframes input-error {
+// 	0% {
+// 		transform: translateX(0);
+// 	}
+// 	20% {
+// 		transform: translateX(5px);
+// 	}
+// 	40% {
+// 		transform: translateX(-5);
+// 	}
+// 	60% {
+// 		transform: translateX(5px);
+// 	}
+// 	80% {
+// 		transform: translateX(-5px);
+// 	}
+// 	100% {
+// 		transform: translateX(0);
+// 	}
+// }
