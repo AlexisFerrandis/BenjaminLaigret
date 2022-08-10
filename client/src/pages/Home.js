@@ -15,12 +15,14 @@ const Home = ({ context }) => {
 
 	const [homeDisplayed, setHomeDisplayed] = useState(false);
 	const [portfolioDisplayed, setPortfolioDisplayed] = useState(false);
+	const [aboutDisplayed, setAboutDisplayed] = useState(false);
 
 	// scroll handler
 	useEffect(() => {
 		// first time display
 		if (context === "homeSection") setHomeDisplayed(true);
 		if (context === "portfolioSection") setPortfolioDisplayed(true);
+		if (context === "aboutSection") setAboutDisplayed(true);
 
 		// scroll to
 		let section = document.getElementById(context);
@@ -92,7 +94,7 @@ const Home = ({ context }) => {
 			<BigWale />
 			<HomeSection homeDisplayed={homeDisplayed} />
 			<PortfolioSection portfolioDisplayed={portfolioDisplayed} />
-			<AboutSection />
+			<AboutSection aboutDisplayed={aboutDisplayed} />
 			<ContactSection />
 		</div>
 	);

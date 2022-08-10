@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 // img
 // import canard from "../../../assets/about/canard.jpg";
 
 const Character = () => {
+	useEffect(() => {
+		const paragraphs = document.querySelectorAll("p");
+		for (let i = 0; i < paragraphs.length; i++) {
+			paragraphs[i].style.animationDelay = `${1000 + 200 * i}ms`;
+		}
+	});
 	return (
 		<div className="about-section__content--character-part">
 			<div className="header">{/* <img src={canard} alt="canard" className="canard-head" /> */}</div>

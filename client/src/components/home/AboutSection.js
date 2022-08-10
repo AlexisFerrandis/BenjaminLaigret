@@ -3,14 +3,14 @@ import TitleUnderline from "../components/TitleUnderline";
 import Character from "./About/Character";
 import Skills from "./About/Skills";
 
-const AboutSection = () => {
+const AboutSection = ({ aboutDisplayed }) => {
 	return (
 		<div className="home-page__section  about-section" id="aboutSection">
-			<h2>À propos</h2>
-			<TitleUnderline />
+			{aboutDisplayed && <h2>À propos</h2>}
+			{aboutDisplayed && <TitleUnderline />}
 			<div className="about-section__content">
-				<Skills />
-				<Character />
+				{aboutDisplayed && <Skills />}
+				{aboutDisplayed && <Character />}
 			</div>
 		</div>
 	);

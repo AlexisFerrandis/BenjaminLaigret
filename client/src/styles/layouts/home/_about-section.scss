@@ -20,6 +20,8 @@
 					align-items: center;
 					width: 33%;
 					margin-bottom: 40px;
+					opacity: 0;
+					animation: skill-pop-in $long-animation cubic-bezier(0, 0.74, 0.63, 1.48) forwards;
 					img {
 						width: 64px;
 						height: 64px;
@@ -46,6 +48,9 @@
 					align-items: center;
 					width: 50%;
 					margin-bottom: 20px;
+					opacity: 0;
+					animation: hobbie-fade-in $long-animation ease-in-out forwards;
+
 					img {
 						width: 48px;
 						height: 48px;
@@ -54,7 +59,7 @@
 						filter: grayscale(1) invert(1);
 					}
 					p {
-						font-size: 18px;
+						font-size: 20px;
 						font-weight: 500;
 					}
 				}
@@ -88,15 +93,50 @@
 					font-size: 20px;
 					text-align: justify;
 					margin-bottom: 20px;
+					opacity: 0;
+					animation: text-fade-in $long-animation ease-in-out forwards;
 					span {
 						color: $bl-quatrary;
 						font-weight: 600;
 					}
 				}
 				.contact {
-					margin-top: 60px;
+					margin-top: 80px;
 				}
 			}
 		}
+	}
+}
+
+@keyframes skill-pop-in {
+	0% {
+		opacity: 0;
+		transform: scale(0.3);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes hobbie-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes text-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(-20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }
