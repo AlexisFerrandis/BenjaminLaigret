@@ -1,5 +1,6 @@
 import React from "react";
 import TitleUnderline from "../components/TitleUnderline";
+import Character from "./About/Character";
 import Skills from "./About/Skills";
 
 const AboutSection = () => {
@@ -9,7 +10,7 @@ const AboutSection = () => {
 			<TitleUnderline />
 			<div className="about-section__content">
 				<Skills />
-				<div className="about-section__content--character-part"></div>
+				<Character />
 			</div>
 		</div>
 	);

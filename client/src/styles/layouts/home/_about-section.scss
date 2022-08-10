@@ -9,6 +9,7 @@
 		&--skills-part {
 			width: 30%;
 			height: 100%;
+			margin-top: 20px;
 			.skills {
 				display: flex;
 				justify-content: space-between;
@@ -17,20 +18,85 @@
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					width: 20%;
-					margin: 20px 10px;
+					width: 33%;
+					margin-bottom: 40px;
 					img {
 						width: 64px;
 						height: 64px;
 						object-fit: cover;
-						filter: drop-shadow(0 0.7rem 0.5rem $bl-dark);
+						filter: grayscale(1) invert(1);
+						transition: $short-animation;
+					}
+				}
+				#maya {
+					img {
+						filter: invert(1);
+					}
+				}
+			}
+			.hobbies {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				margin-top: 20px;
+				color: #fff;
+				.hobby {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					width: 50%;
+					margin-bottom: 20px;
+					img {
+						width: 48px;
+						height: 48px;
+						object-fit: cover;
+						margin-bottom: 20px;
+						filter: grayscale(1) invert(1);
+					}
+					p {
+						font-size: 18px;
+						font-weight: 500;
+					}
+				}
+				.camera-hobby {
+					justify-content: space-between;
+					h4 {
+						font-size: 64px;
+						font-weight: 300;
 					}
 				}
 			}
 		}
 		&--character-part {
+			position: relative;
 			width: 70%;
 			height: 100%;
+			.canard-head {
+				position: absolute;
+				top: -120px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 96px;
+				height: 96px;
+				object-fit: cover;
+				border-radius: 50%;
+			}
+			.content {
+				padding: 20px 80px 0;
+				p {
+					color: #fff;
+					font-size: 20px;
+					text-align: justify;
+					margin-bottom: 20px;
+					span {
+						color: $bl-quatrary;
+						font-weight: 600;
+					}
+				}
+				.contact {
+					margin-top: 60px;
+				}
+			}
 		}
 	}
 }
