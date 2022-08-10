@@ -63,10 +63,10 @@
 						font-weight: 500;
 					}
 				}
-				.camera-hobby {
+				.project-counter {
 					justify-content: space-between;
 					h4 {
-						font-size: 64px;
+						font-size: 56px;
 						font-weight: 300;
 					}
 				}
@@ -76,16 +76,16 @@
 			position: relative;
 			width: 70%;
 			height: 100%;
-			.canard-head {
-				position: absolute;
-				top: -120px;
-				left: 50%;
-				transform: translateX(-50%);
-				width: 96px;
-				height: 96px;
-				object-fit: cover;
-				border-radius: 50%;
-			}
+			// .canard-head {
+			// 	position: absolute;
+			// 	top: -120px;
+			// 	left: 50%;
+			// 	transform: translateX(-50%);
+			// 	width: 96px;
+			// 	height: 96px;
+			// 	object-fit: cover;
+			// 	border-radius: 50%;
+			// }
 			.content {
 				padding: 20px 80px 0;
 				p {
@@ -95,13 +95,22 @@
 					margin-bottom: 20px;
 					opacity: 0;
 					animation: text-fade-in $long-animation ease-in-out forwards;
+					line-height: 1.15em;
+					user-select: text;
+					cursor: default;
+					&::selection {
+						background-color: rgba($bl-secondary, 0.8);
+					}
 					span {
 						color: $bl-quatrary;
 						font-weight: 600;
+						&::selection {
+							background-color: rgba($bl-secondary, 0.8);
+						}
 					}
 				}
 				.contact {
-					margin-top: 80px;
+					margin-top: 40px;
 				}
 			}
 		}

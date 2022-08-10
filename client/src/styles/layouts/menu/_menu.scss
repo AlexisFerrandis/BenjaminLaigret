@@ -37,6 +37,7 @@
 			font-weight: 500;
 			line-height: 1.5em;
 			letter-spacing: 10px;
+			user-select: none;
 			&::after {
 				position: absolute;
 				content: "";

@@ -29,7 +29,9 @@ const Character = () => {
 				<p>
 					J'aime travailler avec tout type de <span>structures</span>, particuliers, entreprises, associations et agence de communication.
 				</p>
-				<p className="contact">N’hésitez pas à me contacter pour discuter de votre projet !</p>
+				<p className="contact">
+					N’hésitez pas à me contacter pour discuter de votre <span>projet</span> !
+				</p>
 			</div>
 			<div className="footer"></div>
 		</div>

@@ -33,7 +33,7 @@ const Skills = () => {
 			let upto = 0;
 			function updated() {
 				var count = document.getElementById("counter");
-				count.innerHTML = Math.floor(++upto / 10);
+				count.innerHTML = Math.ceil(++upto / 10);
 				if (upto === 380) {
 					clearInterval(counts);
 				}
@@ -66,16 +66,17 @@ const Skills = () => {
 			</div>
 
 			<div className="hobbies">
-				<div className="hobby">
-					<img src={school} alt="school" />
-					<p>Emile Cohl</p>
-				</div>
-				<div className="hobby camera-hobby">
+				<div className="hobby project-counter">
 					<h4>
 						<span id="counter"></span>
 					</h4>
 					<p>Projets</p>
 				</div>
+				<div className="hobby">
+					<img src={school} alt="school" />
+					<p>Emile Cohl Lyon</p>
+				</div>
+
 				<div className="hobby">
 					<img src={camera} alt="camera" />
 					<p>Photographie</p>

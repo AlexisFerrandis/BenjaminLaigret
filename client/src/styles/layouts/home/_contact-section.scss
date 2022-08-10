@@ -1,0 +1,108 @@
+.contact-section {
+	&__content {
+		width: 90%;
+		height: 75%;
+		display: flex;
+		justify-content: space-between;
+		margin: 40px 0 0 2%;
+		&--left-part {
+			position: relative;
+			width: 30%;
+			height: 100%;
+			margin-top: 20px;
+			.item {
+				display: flex;
+				align-items: center;
+				margin-bottom: 30px;
+				img {
+					width: 36px;
+					height: 36px;
+					object-fit: cover;
+					margin-right: 10px;
+					filter: grayscale(1) invert(1);
+				}
+				p,
+				a {
+					color: #fff;
+					font-size: 20px;
+					font-weight: 500;
+				}
+			}
+			.social-links {
+				position: absolute;
+				bottom: 40px;
+				img {
+					width: 36px;
+					height: 36px;
+					object-fit: cover;
+					filter: grayscale(1) invert(1);
+					margin-right: 40px;
+				}
+			}
+		}
+		&--right-part {
+			width: 70%;
+			height: 100%;
+			form {
+				width: 60%;
+				margin: 0 auto;
+				/* width */
+				::-webkit-scrollbar {
+					width: 4px;
+				}
+
+				/* Track */
+				::-webkit-scrollbar-track {
+					background: transparent;
+				}
+
+				/* Handle */
+				::-webkit-scrollbar-thumb {
+					background: $bl-tertiary;
+				}
+
+				/* Handle on hover */
+				::-webkit-scrollbar-thumb:hover {
+					background: $bl-quatrary;
+				}
+				input[type="text"],
+				input[type="email"],
+				input[type="submit"],
+				textarea {
+					width: 100%;
+					padding: 15px 16px;
+					margin-bottom: 15px;
+					border: 3px solid #fff;
+					font-size: 20px;
+					color: #fff;
+					background-color: transparent;
+					border-radius: 6px;
+					resize: none;
+					&:focus {
+						border: 3px solid $bl-tertiary;
+					}
+					&::placeholder {
+						color: rgba(255, 255, 255, 0.8);
+					}
+					&::selection {
+						background-color: rgba($bl-secondary, 0.8);
+					}
+				}
+				textarea {
+					height: 200px;
+				}
+				input[type="submit"] {
+					display: block;
+					width: 150px;
+					margin: auto;
+					cursor: pointer;
+					transition: 100ms;
+					&:active {
+						border: 3px solid #fff;
+						transform: scale(0.98);
+					}
+				}
+			}
+		}
+	}
+}

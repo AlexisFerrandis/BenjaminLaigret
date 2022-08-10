@@ -46,7 +46,7 @@ $long-animation: 500ms;
 	}
 }
 @mixin desktop-breakpoint {
-	@media (max-width: 1024px) {
+	@media (max-width: 1200px) {
 		@content;
 	}
 }
