@@ -8,6 +8,9 @@
 		justify-content: space-between;
 		margin: 40px auto 40px;
 		// background-color: aqua;
+		@include mobile-breakpoint {
+			flex-direction: column-reverse;
+		}
 		&--left-part {
 			position: relative;
 			width: 30%;
@@ -35,6 +38,10 @@
 			}
 			.social-links {
 				margin-top: 190px;
+				@include mobile-breakpoint {
+					margin-top: 80px;
+					display: flex;
+				}
 				.social-link {
 					opacity: 0;
 					animation: social-links-fade-in 2000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
@@ -51,11 +58,18 @@
 		&--right-part {
 			width: 70%;
 			height: 100%;
+			@include mobile-breakpoint {
+				width: 100%;
+			}
 			form {
 				position: relative;
-				width: 60%;
 				margin: 0 auto;
-
+				@include tablet-breakpoint {
+					margin: 0 0 0 150px;
+				}
+				@include mobile-breakpoint {
+					margin: 0 0 50px 0;
+				}
 				::-webkit-scrollbar {
 					width: 4px;
 				}
@@ -102,6 +116,11 @@
 					// }
 					opacity: 0;
 					animation: inputs-fade-in 2200ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
+				}
+				input[type="text"],
+				input[type="email"],
+				input[type="submit"] {
+					max-width: 400px;
 				}
 				textarea {
 					height: 200px;

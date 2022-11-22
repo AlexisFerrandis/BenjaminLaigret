@@ -41,20 +41,20 @@ $long-animation: 500ms;
 
 // mixins
 @mixin mobile-breakpoint {
-	@media (max-width: 550px) {
+	@media (max-width: 650px) {
 		@content;
 	}
 }
 @mixin tablet-breakpoint {
-	@media (max-width: 900px) {
+	@media (max-width: 1150px) {
 		@content;
 	}
 }
-@mixin desktop-breakpoint {
-	@media (max-width: 1200px) {
-		@content;
-	}
-}
+// @mixin desktop-breakpoint {
+// 	@media (max-width: 1200px) {
+// 		@content;
+// 	}
+// }
 
 // scrollbar
 ::-webkit-scrollbar {
@@ -76,6 +76,10 @@ h2 {
 	color: $bl-secondary;
 	font-size: 4.4em;
 	animation: title-fade-in 1s ease-in-out;
+	@include mobile-breakpoint {
+		margin-left: 30px;
+		font-size: 2.6em;
+	}
 }
 @keyframes title-fade-in {
 	0% {

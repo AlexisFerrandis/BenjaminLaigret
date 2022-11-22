@@ -26,11 +26,6 @@ const Header = () => {
 		item.style.transform = `translate(${x}px, ${y}px)`;
 	});
 
-    const navLinks = document.querySelectorAll(".header__nav--link");
-    for (let i = 0; i<navLinks.length; i ++) {
-        navLinks[i].style.animationDelay = `${2000 + i * 120}ms`;
-    }
-
 	return (
 		<div className="header" id="home">
 			<div className="header__logo">
@@ -45,10 +40,10 @@ const Header = () => {
                         <a href="#portfolioSection">Portfolio</a>
                     </li>
                     <li className="header__nav--link">
-                        <a href="#about">À propos</a>
+                        <a href="#aboutSection">À propos</a>
                     </li>
                     <li className="header__nav--link">
-                        <a href="#contact">Me contacter</a>
+                        <a href="#contactSection">Contact</a>
                     </li>
                 </ul>
             </nav>

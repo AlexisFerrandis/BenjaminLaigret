@@ -34,11 +34,14 @@
 		li a {
 			position: relative;
 			color: white;
-			font-size: 6em;
+			font-size: 4.8em;
 			font-weight: 500;
-			line-height: 1.5em;
+			line-height: 1.8em;
 			letter-spacing: 10px;
 			user-select: none;
+			@include mobile-breakpoint {
+				font-size: 2.6em;
+            }
 			&::after {
 				position: absolute;
 				content: "";

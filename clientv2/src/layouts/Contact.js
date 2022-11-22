@@ -14,7 +14,6 @@ const Contact = () => {
     const [contactDisplay, setContactDisplay] = useState(false);
 
 	document.addEventListener("scroll", () => {
-		console.log(window.scrollY);
 		if (window.scrollY >= 1690) setContactDisplay(true) 
 	})
 

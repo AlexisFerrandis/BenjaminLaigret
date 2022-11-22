@@ -6,14 +6,22 @@
 	animation: sidenav-fade-in 2000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 2800ms;
 	opacity: 0;
     z-index: 99;
+    @include mobile-breakpoint {
+        top: 230px;
+	    padding: 0 15px  0 ;
+    }
     &__menu {
-        margin-bottom:400px;
+    margin-bottom:400px;
+    
     // hamburger
         .menu-btn {
             position: relative;
             width: 32px;
             height: 24px;
             cursor: pointer;
+            @include mobile-breakpoint {
+                height: 20px;
+            }
             &::before {
                 position: absolute;
                 content: "";
@@ -24,6 +32,10 @@
                 background-color: $bl-secondary;
                 border-radius: 10px;
                 transition: $short-animation;
+                @include mobile-breakpoint {
+                    height: 3px;
+                    -webkit-box-shadow: 0px 2px 13px 5px #FFFFFF; 
+                }
             }
             &::after {
                 position: absolute;
@@ -35,6 +47,10 @@
                 background-color: $bl-secondary;
                 border-radius: 10px;
                 transition: $short-animation;
+                @include mobile-breakpoint {
+                    height: 3px;
+                    box-shadow: 0px 2px 13px 5px #FFFFFF;
+                }
             }
         }
         .opened-menu-btn {
@@ -50,10 +66,13 @@
                 top: 0;
                 width: 100%;
                 height: 4px;
-                background-color: $bl-secondary;
+                background-color: white;
                 transform: rotate(45deg) translateY(16px);
                 border-radius: 10px;
                 transition: $short-animation;
+                @include mobile-breakpoint {
+                    height: 3px;
+                }
             }
             &::after {
                 position: absolute;
@@ -62,10 +81,13 @@
                 bottom: 0;
                 width: 100%;
                 height: 4px;
-                background-color: $bl-secondary;
+                background-color: white;
                 transform: rotate(-45deg) translateY(-16px);
                 border-radius: 10px;
                 transition: $short-animation;
+                @include mobile-breakpoint {
+                    height: 3px;
+                }
             }
         }
     }

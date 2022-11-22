@@ -3,7 +3,7 @@ import Menu from "./Menu"
 
 
 const NavBar = () => {
-    const state = "is-active;"
+    // const state = "is-active"
 
     const [menuDisplay, setMenuDisplay] = useState(false);
 	const [menuActive, setMenuActive] = useState(false);
@@ -36,7 +36,7 @@ const NavBar = () => {
                     <a href="#aboutSection" className={state.isActive ? "is-active" : ""}>
                         <div className="nav-bar__link"></div>
                     </a>
-                    <a href="#contact" className={state.isActive ? "is-active" : ""}>
+                    <a href="#contactSection" className={state.isActive ? "is-active" : ""}>
                         <div className="nav-bar__link"></div>
                     </a>
                 </div> */}

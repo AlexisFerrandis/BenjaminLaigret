@@ -7,10 +7,26 @@
 		display: flex;
 		justify-content: space-between;
 		margin: 40px auto 0;
+		@include tablet-breakpoint {
+			flex-direction: column-reverse;
+		}
+		@include mobile-breakpoint {
+			margin: 0 auto;
+		}
 		&--skills-part {
 			width: 30%;
 			height: 100%;
 			margin-top: 20px;
+			display: flex;
+			flex-direction: column;
+			@include tablet-breakpoint {
+				flex-direction: row;
+				justify-content: space-around;
+				width: 100%;
+			}
+			@include mobile-breakpoint {
+				flex-direction: column;
+            }
 			.skills {
 				display: flex;
 				justify-content: space-between;
@@ -38,6 +54,9 @@
 				justify-content: space-between;
 				margin-top: 20px;
 				color: $bl-secondary;
+				@include tablet-breakpoint {
+					margin-top: 0;
+				}
 				.hobby {
 					display: flex;
 					flex-direction: column;
@@ -82,8 +101,22 @@
 			// 	object-fit: cover;
 			// 	border-radius: 50%;
 			// }
+			@include tablet-breakpoint {
+				width: 88%;
+			}
+			@include mobile-breakpoint {
+				width: 100%;
+			}
+			.header {
+				@include tablet-breakpoint {
+					display: none;
+				}
+			}
 			.content {
 				padding-left: 80px;
+				@include mobile-breakpoint {
+					padding-left: 0;
+				}
 				p {
 					color: $bl-secondary;;
 					font-size: 20px;

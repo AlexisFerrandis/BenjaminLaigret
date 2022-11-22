@@ -9,7 +9,7 @@ const About = () => {
     const [aboutDisplay, setAboutDisplay] = useState(false);
 
 	document.addEventListener("scroll", () => {
-		if (window.scrollY >= 1050) setAboutDisplay(true) 
+		if (window.scrollY >= 838) setAboutDisplay(true) 
 	})
 	
 	return (
