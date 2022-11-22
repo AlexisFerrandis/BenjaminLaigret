@@ -1,0 +1,89 @@
+// fonts
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+// font-family: 'Playfair Display', serif;
+
+// reset
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	list-style: none;
+	list-style-type: none;
+	outline: none;
+	border: none;
+	text-decoration: none;
+	font-family: "Josefin Sans", sans-serif;
+}
+*::selection {
+	background-color: rgba(#35539b, 0.8);
+}
+
+// variables
+$bl-primary: #b0c3dc;
+$bl-secondary: #232665;
+$bl-tertiary: #5a83c1;
+$bl-quatrary: #7da6d4;
+$bl-quinary: #35539b;
+
+$bl-white: #e9e9f0;
+$bl-dark: #15153b;
+
+$bl-error: rgb(156, 44, 44);
+
+// animations
+$flash-animation: 100ms; // ease in out infinite...
+$short-animation: 200ms;
+$long-animation: 500ms;
+
+// mixins
+@mixin mobile-breakpoint {
+	@media (max-width: 550px) {
+		@content;
+	}
+}
+@mixin tablet-breakpoint {
+	@media (max-width: 900px) {
+		@content;
+	}
+}
+@mixin desktop-breakpoint {
+	@media (max-width: 1200px) {
+		@content;
+	}
+}
+
+// scrollbar
+::-webkit-scrollbar {
+	width: 10px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: rgba($bl-quinary, 0.6);
+	border-radius: 20px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: rgba($bl-quinary, 1);
+}
+
+h2 {
+	margin-left: 50px;
+	color: $bl-secondary;
+	font-size: 4.4em;
+	animation: title-fade-in 1s ease-in-out;
+}
+@keyframes title-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

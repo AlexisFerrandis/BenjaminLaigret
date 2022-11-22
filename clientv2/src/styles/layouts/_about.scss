@@ -1,11 +1,12 @@
 .about-section {
+	padding: 50px 20px;
 	&__content {
 		width: 90%;
+		max-width: 1300px;
 		height: 75%;
 		display: flex;
 		justify-content: space-between;
-		margin: 40px 0 0 2%;
-
+		margin: 40px auto 0;
 		&--skills-part {
 			width: 30%;
 			height: 100%;
@@ -26,13 +27,8 @@
 						width: 64px;
 						height: 64px;
 						object-fit: cover;
-						filter: grayscale(1) invert(1);
+						filter: invert(14%) sepia(16%) saturate(6670%) hue-rotate(221deg) brightness(95%) contrast(98%);
 						transition: $short-animation;
-					}
-				}
-				#maya {
-					img {
-						filter: invert(1);
 					}
 				}
 			}
@@ -41,7 +37,7 @@
 				flex-wrap: wrap;
 				justify-content: space-between;
 				margin-top: 20px;
-				color: #fff;
+				color: $bl-secondary;
 				.hobby {
 					display: flex;
 					flex-direction: column;
@@ -50,15 +46,15 @@
 					margin-bottom: 20px;
 					opacity: 0;
 					animation: hobbie-fade-in $long-animation ease-in-out forwards;
-
 					img {
 						width: 48px;
 						height: 48px;
 						object-fit: cover;
 						margin-bottom: 20px;
-						filter: grayscale(1) invert(1);
+						filter: invert(14%) sepia(16%) saturate(6670%) hue-rotate(221deg) brightness(95%) contrast(98%);
 					}
 					p {
+						text-align: center;
 						font-size: 20px;
 						font-weight: 500;
 					}
@@ -87,9 +83,9 @@
 			// 	border-radius: 50%;
 			// }
 			.content {
-				padding: 20px 80px 0;
+				padding-left: 80px;
 				p {
-					color: #fff;
+					color: $bl-secondary;;
 					font-size: 20px;
 					text-align: justify;
 					margin-bottom: 20px;
@@ -102,6 +98,7 @@
 					span {
 						color: $bl-quatrary;
 						font-weight: 600;
+						
 					}
 				}
 				.contact {

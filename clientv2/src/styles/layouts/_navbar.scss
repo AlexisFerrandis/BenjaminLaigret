@@ -1,0 +1,107 @@
+.nav-bar {
+	position: fixed;
+	top: 250px;
+	right: 0;
+	padding: 35px 35px 0 35px;
+	animation: sidenav-fade-in 2000ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards 2800ms;
+	opacity: 0;
+    z-index: 99;
+    &__menu {
+        margin-bottom:400px;
+    // hamburger
+        .menu-btn {
+            position: relative;
+            width: 32px;
+            height: 24px;
+            cursor: pointer;
+            &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 0;
+                width: 100%;
+                height: 4px;
+                background-color: $bl-secondary;
+                border-radius: 10px;
+                transition: $short-animation;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                bottom: 0;
+                width: 100%;
+                height: 4px;
+                background-color: $bl-secondary;
+                border-radius: 10px;
+                transition: $short-animation;
+            }
+        }
+        .opened-menu-btn {
+            position: relative;
+            width: 32px;
+            height: 26px;
+            cursor: pointer;
+            z-index: 999;
+            &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                top: 0;
+                width: 100%;
+                height: 4px;
+                background-color: $bl-secondary;
+                transform: rotate(45deg) translateY(16px);
+                border-radius: 10px;
+                transition: $short-animation;
+            }
+            &::after {
+                position: absolute;
+                content: "";
+                display: block;
+                bottom: 0;
+                width: 100%;
+                height: 4px;
+                background-color: $bl-secondary;
+                transform: rotate(-45deg) translateY(-16px);
+                border-radius: 10px;
+                transition: $short-animation;
+            }
+        }
+    }
+	&__link {
+		width: 32px;
+		height: 4px;
+		border-radius: 10px;
+        background-color: $bl-secondary;
+		margin: 24px 0;
+		cursor: pointer;
+		transition: $short-animation ease-in-out;
+	}
+	.is-active {
+		.nav-bar__link {
+			background-color: $bl-tertiary;
+			transform: scaleX(1.75);
+			transform-origin: right;
+		}
+	}
+	.bob {
+		width: 32px;
+		height: 4px;
+		border-radius: 10px;
+		background-color: #fff;
+		margin: 24px 0;
+		cursor: pointer;
+	}
+}
+
+@keyframes sidenav-fade-in {
+	0% {
+		opacity: 0;
+		transform: translateX(50%) translateY(-50%);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0) translateY(-50%);
+	}
+}
